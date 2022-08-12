@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 18px;
+  color: #000;
+  background-color: #ffffcc;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 830px;
+}
+
+.main {
+  padding-top: 30px;
+}
+
+.main__title {
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.game {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.game-info {
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.game-info__turn-counter {
+  margin-right: 10px;
+}
+
+.game-info__status {
+}
+
+.game-board {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+}
+
+.game-board td {
+  background-color: greenyellow;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  padding: 7px 7px;
+  text-align: right;
+  z-index: 1;
+}
+
+.game-board td span {
+  position: absolute;
+  line-height: 100%;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.game-board td span.tower-level {
+  right: 25%;
+  top: 25%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  user-select: none;
+}
+
+.game-board__level-1 {
+  height: 90%;
+  width: 90%;
+  background-color: #fff;
+}
+
+.game-board__level-2 {
+  height: 80%;
+  width: 80%;
+  background-color: rgb(230, 230, 230);
+}
+
+.game-board__level-3 {
+  height: 70%;
+  width: 70%;
+  background-color: #fff;
+}
+
+.game-board__level-4 {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: rgb(60, 40, 255);
+}
+
+.game-board__player-1::after,
+.game-board__player-2::after {
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-text-stroke: #000 0.033em;
+}
+
+.game-board__player-1::after {
+  content: '1';
+  color: rgb(160, 152, 255);
+}
+
+.game-board__player-2::after {
+  content: '2';
+  color: rgb(255, 212, 163);
+}
+
+.player-active {
+  text-decoration: underline;
+}
+
+.worker-selected::after {
+  -webkit-text-stroke: rgb(255, 0, 0) 0.05em;
+}
+
+.control-panel {
+  padding: 30px 0 15px;
+}
+
+.links {
+}
+
+.rulebook {
+}
